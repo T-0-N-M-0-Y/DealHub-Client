@@ -1,12 +1,14 @@
 import Category from "../../../Components/Category/Category";
 import RecentProducts from "../../../Components/Recent/RecentProducts";
 import Banner from "../Banner/Banner";
+import { Header } from "../Header/Header";
 import Navbar from "../Navbar/Navbar";
 
 const Home = () => {
   return (
     <>
       <div className="min-h-screen p-2">
+        <Header></Header>
         <div className="grid grid-cols-5 gap-2">
           {/* Categories */}
           <div className="border-2 p-2">
