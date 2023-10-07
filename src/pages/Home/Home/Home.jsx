@@ -1,4 +1,5 @@
 import Category from "../../../Components/Category/Category";
+import Banner from "../Banner/Banner";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
               {/* Cover Page */}
               <div className="col-span-3 p-4  border-4">
                 <h2 className="text-2xl font-semibold mb-2">Cover Page</h2>
+                <Banner></Banner>
               </div>
 
               {/*Recent Products */}
