@@ -16,7 +16,7 @@ const Category = () => {
             <h2 className="text-2xl font-bold">BROWSE CATEGORIES</h2>
             {
                 categories.map(category => <Link 
-                    className="block ml-4 text-xl" 
+                    className="block text-xl font-semibold hover:bg-red-500 hover:text-white border p-1" 
                     key={category.id}
                     to={`/category/${category.id}`}
                     >{category.name}</Link>)
