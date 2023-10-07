@@ -13,9 +13,7 @@ import {
   IconButton,
 } from "@material-tailwind/react";
 import {
-  CubeTransparentIcon,
   UserCircleIcon,
-  CodeBracketSquareIcon,
   ChevronDownIcon,
   Bars2Icon,
   HeartIcon,
