@@ -1,4 +1,5 @@
 import Category from "../../../Components/Category/Category";
+import RecentProducts from "../../../Components/Recent/RecentProducts";
 import Banner from "../Banner/Banner";
 import { Header } from "../Header/Header";
 
@@ -24,6 +25,7 @@ const Home = () => {
               {/*Recent Products */}
               <div className=" p-4 border-4">
                 <h2 className="text-2xl font-semibold mb-2">Recent Products</h2>
+                <RecentProducts></RecentProducts>
               </div>
             </div>
             {/* Category with icon */}
