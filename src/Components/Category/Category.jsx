@@ -12,7 +12,7 @@ const Category = () => {
   }, []);
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-2 border-2">
       <h2 className="text-2xl font-bold">BROWSE CATEGORIES</h2>
       {categories.map((category) => (
         <Link
