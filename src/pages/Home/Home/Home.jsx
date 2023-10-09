@@ -1,4 +1,5 @@
 import Category from "../../../Components/Category/Category";
+import NewArrivals from "../../../Components/NewArrivals/NewArrivals";
 import RecentProducts from "../../../Components/Recent/RecentProducts";
 import Banner from "../Banner/Banner";
 import BestProducts from "../BestProducts/BestProducts";
@@ -28,7 +29,7 @@ const Home = () => {
                 <RecentProducts></RecentProducts>
               </div>
             </div>
-
+            <NewArrivals></NewArrivals>
             <BestProducts></BestProducts>
           </div>
         </div>
