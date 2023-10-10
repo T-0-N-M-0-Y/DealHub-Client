@@ -1,6 +1,9 @@
 const RecentProducts = () => {
   return (
     <>
+      <h1 className="bg-red-600 text-white py-4  px-6 tracking-widest text-sm  mt-1 font-semibold">
+        Recent Products
+      </h1>
       <div className="bg-white rounded-lg shadow-lg p-4 max-w-md">
         <h2 className="text-2xl font-semibold text-gray-800">Product Name</h2>
         <div className="my-4">

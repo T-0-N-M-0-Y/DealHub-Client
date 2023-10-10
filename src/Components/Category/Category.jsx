@@ -13,10 +13,14 @@ const Category = () => {
 
   return (
     <div className="space-y-2 border-2">
-      <h2 className="text-2xl font-bold">BROWSE CATEGORIES</h2>
+      <div className="bg-black py-6">
+        <h2 className="tracking-widest text-center   text-white font-semibold">
+          BROWSE CATEGORIES
+        </h2>
+      </div>
       {categories.map((category) => (
         <Link
-          className="block text-xl font-semibold hover:border-l-4 border-red-500 hover:text-red-500 p-1"
+          className="block hover:border-l-4 border-red-500 hover:text-red-500 pl-2 py-1"
           key={category.id}
           to={`/category/${category.id}`}
         >

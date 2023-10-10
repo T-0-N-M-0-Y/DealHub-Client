@@ -174,8 +174,8 @@ function NavList() {
       <div className="relative flex w-full gap-2 md:w-max">
         <Input
           type="search"
-          label="Type here..."
-          className="pr-20"
+          placeholder="Search Here"
+          className="pl-4"
           containerProps={{
             className: "min-w-[288px]",
           }}
@@ -201,8 +201,8 @@ export function Header() {
   }, []);
 
   return (
-    <Navbar className="bg-black mx-auto max-h-screen p-2 lg:pl-6 ">
-      <div className="relative mx-auto flex items-center text-blue-gray-900">
+    <Navbar className=" mx-auto max-h-screen p-2 lg:pl-6 ">
+      <div className="relative mx-auto flex items-center text-black">
         <Typography
           as="a"
           href="#"

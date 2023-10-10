@@ -3,7 +3,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 // import required modules
@@ -23,7 +22,7 @@ const NewArrivals = () => {
 
   return (
     <div className="my-10">
-      <h2 className="text-2xl font-bold mt-10 border-b-4 border-red-500 lg:mr-[1000px]">
+      <h2 className="text-xl font-bold mt-10 pb-4 border-b-4 border-red-500">
         NEW ARRIVALS
       </h2>
       <Swiper

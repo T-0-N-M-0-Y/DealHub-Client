@@ -5,16 +5,20 @@ import RecentProducts from "../../../Components/Recent/RecentProducts";
 import SomeInfo from "../../../Components/SomeInfo/SomeInfo";
 import Banner from "../Banner/Banner";
 import BestProducts from "../BestProducts/BestProducts";
+import { Header } from "../Header/Header";
 
 import Navbar from "../Navbar/Navbar";
 
 const Home = () => {
   return (
     <>
+      <div className="pb-6">
+        <Header></Header>
+      </div>
       <div className="p-2">
         <div className="grid grid-cols-5 gap-2">
           {/* Categories */}
-          <div className="border-2 p-2">
+          <div className="">
             <Category></Category>
             <LatestProducts></LatestProducts>
             <SomeInfo></SomeInfo>
@@ -28,8 +32,7 @@ const Home = () => {
               </div>
 
               {/*Recent Products */}
-              <div className="border-2 p-2">
-                <h2 className="text-2xl font-semibold mb-2">Recent Products</h2>
+              <div className=" p-2">
                 <RecentProducts></RecentProducts>
               </div>
             </div>

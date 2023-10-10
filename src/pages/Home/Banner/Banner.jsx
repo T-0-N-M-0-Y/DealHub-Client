@@ -32,7 +32,7 @@ const Banner = () => {
           <div key={index}>
             <img
               src={slide.imgSrc}
-              className="block w-full h-[50vh]"
+              className="block w-full h-[58vh]"
               alt={`Slide ${index + 1}`}
             />
             <div className="absolute inset-x-0 bottom-5 py-5 text-center text-white md:block"></div>
