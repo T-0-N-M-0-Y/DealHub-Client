@@ -1,6 +1,8 @@
 import Category from "../../../Components/Category/Category";
+import LatestProducts from "../../../Components/LatestProducts/LatestProducts";
 import NewArrivals from "../../../Components/NewArrivals/NewArrivals";
 import RecentProducts from "../../../Components/Recent/RecentProducts";
+import SomeInfo from "../../../Components/SomeInfo/SomeInfo";
 import Banner from "../Banner/Banner";
 import BestProducts from "../BestProducts/BestProducts";
 
@@ -14,6 +16,8 @@ const Home = () => {
           {/* Categories */}
           <div className="border-2 p-2">
             <Category></Category>
+            <LatestProducts></LatestProducts>
+            <SomeInfo></SomeInfo>
           </div>
           <div className="col-span-4">
             <div className="grid grid-cols-4 gap-2">
