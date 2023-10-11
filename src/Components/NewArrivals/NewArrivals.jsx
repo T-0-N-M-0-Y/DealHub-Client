@@ -39,7 +39,7 @@ const NewArrivals = () => {
                 <img
                   src="https://www.digitaltrends.com/wp-content/uploads/2022/08/macbook-air-m2-1.jpg?resize=625%2C417&p=1"
                   alt=""
-                  className="p-4  transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300"
+                  className="p-4  transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-150"
                 />
                 <div className="pl-8 my-4">
                   <Rating

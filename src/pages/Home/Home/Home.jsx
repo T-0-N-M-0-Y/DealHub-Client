@@ -5,9 +5,12 @@ import RecentProducts from "../../../Components/Recent/RecentProducts";
 import SomeInfo from "../../../Components/SomeInfo/SomeInfo";
 import Banner from "../Banner/Banner";
 import BestProducts from "../BestProducts/BestProducts";
+import Brands from "../Brands/Brands";
+import ElectronicsItems from "../ElectronicsItems/ElectronicsItems";
 import { Header } from "../Header/Header";
 
 import Navbar from "../Navbar/Navbar";
+import ShopNow from "../ShopNow/ShopNow";
 
 const Home = () => {
   return (
@@ -15,10 +18,10 @@ const Home = () => {
       <div className="pb-6">
         <Header></Header>
       </div>
-      <div className="p-2">
+      <div className="my-container">
         <div className="grid grid-cols-5 gap-2">
           {/* Categories */}
-          <div className="">
+          <div>
             <Category></Category>
             <LatestProducts></LatestProducts>
             <SomeInfo></SomeInfo>
@@ -38,8 +41,11 @@ const Home = () => {
             </div>
             <NewArrivals></NewArrivals>
             <BestProducts></BestProducts>
+            <ShopNow></ShopNow>
           </div>
         </div>
+        <ElectronicsItems></ElectronicsItems>
+        <Brands></Brands>
       </div>
     </>
   );
