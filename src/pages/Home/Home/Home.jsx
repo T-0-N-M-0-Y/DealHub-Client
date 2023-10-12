@@ -11,6 +11,7 @@ import { Header } from "../Header/Header";
 
 import Navbar from "../Navbar/Navbar";
 import ShopNow from "../ShopNow/ShopNow";
+import Subscribe from "../Subscribe/Subscribe";
 
 const Home = () => {
   return (
@@ -35,7 +36,7 @@ const Home = () => {
               </div>
 
               {/*Recent Products */}
-              <div className=" p-2">
+              <div className=" p-1">
                 <RecentProducts></RecentProducts>
               </div>
             </div>
@@ -46,6 +47,7 @@ const Home = () => {
         </div>
         <ElectronicsItems></ElectronicsItems>
         <Brands></Brands>
+        <Subscribe></Subscribe>
       </div>
     </>
   );

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
+import { FaStaylinked } from "react-icons/fa";
 const Category = () => {
   const [categories, setCategories] = useState([]);
   console.log(categories);
@@ -13,10 +13,11 @@ const Category = () => {
 
   return (
     <div className="space-y-2 border-2">
-      <div className="bg-black py-6">
-        <h2 className="tracking-widest text-center   text-white font-semibold">
-          BROWSE CATEGORIES
-        </h2>
+      <div className="bg-black py-2 px-2 text-white flex gap-3 items-center">
+        <span>
+          <FaStaylinked></FaStaylinked>
+        </span>
+        <h2 className="tracking-widest   font-semibold ">BROWSE CATEGORIES</h2>
       </div>
       {categories.map((category) => (
         <Link
