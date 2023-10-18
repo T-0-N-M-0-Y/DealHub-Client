@@ -16,10 +16,10 @@ import Subscribe from "../Subscribe/Subscribe";
 const Home = () => {
   return (
     <>
-      <div className="pb-6">
+      <div className="pb-6 ">
         <Header></Header>
       </div>
-      <div className="my-container">
+      <div className="my-container hidden lg:block">
         <div className="grid grid-cols-5 gap-2">
           {/* Categories */}
           <div>
@@ -45,6 +45,27 @@ const Home = () => {
             <ShopNow></ShopNow>
           </div>
         </div>
+        <ElectronicsItems></ElectronicsItems>
+        <Brands></Brands>
+        <Subscribe></Subscribe>
+      </div>
+
+
+
+      {/* Mobile  */}
+      <div className="mobile lg:hidden">
+        <Navbar></Navbar>
+        <Banner></Banner>
+        <div className=" p-1 mt-4">
+          <RecentProducts></RecentProducts>
+        </div>
+        <LatestProducts></LatestProducts>
+        <SomeInfo></SomeInfo>
+
+        <NewArrivals></NewArrivals>
+        <BestProducts></BestProducts>
+        <ShopNow></ShopNow>
+
         <ElectronicsItems></ElectronicsItems>
         <Brands></Brands>
         <Subscribe></Subscribe>
