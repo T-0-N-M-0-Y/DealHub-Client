@@ -7,10 +7,10 @@ const BestSelling = () => {
   useEffect(() => {
     fetch("bestSelling.json")
       .then((res) => res.json())
-      .then((data) => setBestSells(data));
+      .then((data) => setBestSells(data.slice(0, 6)));
   }, []);
   return (
-    <div className="grid grid-cols-1 md:grid-cols-5 gap-2">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
       {bestSells.map((bestSell) => (
         <div key={bestSell.id}>
           <div className="border w-auto h-full">

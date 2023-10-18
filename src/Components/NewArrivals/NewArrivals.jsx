@@ -17,7 +17,7 @@ const NewArrivals = () => {
   useEffect(() => {
     fetch("bestSelling.json")
       .then((res) => res.json())
-      .then((data) => setFeatured(data));
+      .then((data) => setFeatured(data.slice(0, 3)));
   }, []);
 
   return (
