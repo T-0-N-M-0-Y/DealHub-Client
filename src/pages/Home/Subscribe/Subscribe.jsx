@@ -7,7 +7,7 @@ import {
 } from "react-icons/fa";
 const Subscribe = () => {
   return (
-    <div className="flex items-center justify-evenly gap-4 py-20 bg-gray-100 mt-16">
+    <div className="md:flex items-center justify-evenly gap-4 py-20 bg-gray-100 mt-16">
       <div>
         <h1 className="text-2xl font-extrabold">
           DEALHUB <span className="text-red-600">.</span>

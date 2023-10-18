@@ -22,7 +22,7 @@ const NewArrivals = () => {
 
   return (
     <div className="my-10">
-      <h2 className="text-xl font-bold mt-10 pb-4 border-b-4 border-red-500">
+      <h2 className="text-xl font-bold mt-10 pb-4 border-b-4 border-red-500 mx-2">
         NEW ARRIVALS
       </h2>
       <Swiper

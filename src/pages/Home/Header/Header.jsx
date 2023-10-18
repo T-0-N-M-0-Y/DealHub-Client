@@ -142,7 +142,7 @@ function NavListMenu() {
         <MenuHandler>
           <Typography as="a" href="#" variant="small" className="font-normal">
             <MenuItem className="hidden items-center gap-2 text-blue-gray-900 lg:flex lg:rounded-full">
-              <EllipsisVerticalIcon className="h-[18px] w-[18px]" /> All
+              <EllipsisVerticalIcon className="h-[28px] w-[28px]" /> All
               Category
               <ChevronDownIcon
                 strokeWidth={2}

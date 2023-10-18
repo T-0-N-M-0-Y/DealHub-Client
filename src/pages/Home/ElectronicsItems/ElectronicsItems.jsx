@@ -22,7 +22,7 @@ const ElectronicsItems = () => {
   return (
     <>
       <div className="my-10">
-        <h2 className="text-xl font-bold mt-10 pb-2 border-b-4 border-red-500">
+        <h2 className="text-xl font-bold mt-10 pb-2 mx-2 border-b-4 border-red-500">
           ELECTRONICS ITEMS
         </h2>
         <Swiper
