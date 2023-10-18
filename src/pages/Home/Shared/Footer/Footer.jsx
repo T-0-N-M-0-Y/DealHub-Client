@@ -2,10 +2,10 @@
 
 const Footer = () => {
   return (
-    <footer className=" pt-4 min-h-[65vh] flex flex-col">
-      <div className="container mx-auto grid grid-cols-7 gap-4 p-4 flex-grow">
+    <footer className="pt-4 min-h-[65vh] flex flex-col">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 p-4 flex-grow">
         {/* Column 1: Contact Information */}
-        <div className="col-span-2">
+        <div className="md:col-span-1 lg:col-span-1">
           <div className="font-bold uppercase mb-6">Contact Information</div>
           <p className="mb-1 text-base text-gray-600">Call us</p>
           <p className="text-red-500 font-bold text-2xl my-2">123-456-7890</p>
@@ -14,7 +14,7 @@ const Footer = () => {
         </div>
 
         {/* Column 2: Company */}
-        <div className="col-span-1">
+        <div className="md:col-span-1">
           <div className="font-bold text-sm uppercase mb-6">Company</div>
           <ul>
             <li className="mb-3 text-sm text-gray-600">About Us</li>
@@ -26,7 +26,7 @@ const Footer = () => {
         </div>
 
         {/* Column 3: Find it Fast */}
-        <div className="col-span-1">
+        <div className="lg:col-span-1">
           <div className="font-bold text-sm uppercase mb-6">Find it Fast</div>
           <ul>
             <li className="mb-3 text-sm text-gray-600">Accessories</li>
@@ -39,7 +39,7 @@ const Footer = () => {
         </div>
 
         {/* Column 4: Explore */}
-        <div className="col-span-1">
+        <div className="lg:col-span-1">
           <div className="font-bold text-sm uppercase mb-6">Explore</div>
           <ul>
             <li className="mb-3 text-sm text-gray-600">Gift a Smile</li>
@@ -52,11 +52,11 @@ const Footer = () => {
         </div>
 
         {/* Column 5: Our Location */}
-        <div className="col-span-2">
+        <div className="md:col-span-1 lg:col-span-1">
           <div className="font-bold uppercase text-sm text-center mb-5">
             Our Location
           </div>
-          <div className="mt-2">{/*  map here */}</div>
+          <div className="mt-2">{/* map here */}</div>
         </div>
       </div>
 
