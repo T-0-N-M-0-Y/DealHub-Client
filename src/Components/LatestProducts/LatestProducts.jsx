@@ -19,7 +19,7 @@ const LatestProducts = () => {
       <div>
         {featured.slice(0, 6).map((product) => (
           <div key={product.id}>
-            <div className="border w-auto h-full flex justify-evenly items-center">
+            <div className="border w-auto h-full my-4 flex justify-evenly items-center">
               <img
                 src="https://wpbingosite.com/wordpress/dimita/wp-content/webp-express/webp-images/uploads/2019/04/Image-20.jpg.webp"
                 alt=""

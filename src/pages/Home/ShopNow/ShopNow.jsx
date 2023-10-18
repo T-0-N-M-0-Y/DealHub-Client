@@ -4,7 +4,7 @@ import img3 from "../../../assets/Shop Now/Banner-7.jpg.webp";
 const ShopNow = () => {
   return (
     <div className="mx-4">
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <img
           src={img1}
           alt=""

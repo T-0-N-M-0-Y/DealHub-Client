@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { FaStaylinked } from "react-icons/fa";
 const Category = () => {
   const [categories, setCategories] = useState([]);
-  console.log(categories);
 
   useEffect(() => {
     fetch("categories.json")

@@ -7,8 +7,7 @@ import Banner from "../Banner/Banner";
 import BestProducts from "../BestProducts/BestProducts";
 import Brands from "../Brands/Brands";
 import ElectronicsItems from "../ElectronicsItems/ElectronicsItems";
-import { Header } from "../Header/Header";
-
+import Header from "../Header/Header";
 import Navbar from "../Navbar/Navbar";
 import ShopNow from "../ShopNow/ShopNow";
 import Subscribe from "../Subscribe/Subscribe";
@@ -49,8 +48,6 @@ const Home = () => {
         <Brands></Brands>
         <Subscribe></Subscribe>
       </div>
-
-
 
       {/* Mobile  */}
       <div className="mobile lg:hidden">
