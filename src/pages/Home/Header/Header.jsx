@@ -1,4 +1,6 @@
-import React from "react";
+import { useState, useEffect, useRef } from "react";
+import { AiOutlineSearch } from "react-icons/ai";
+import { BiSolidUser } from "react-icons/bi";
 import logo from "../../../assets/logo 2.png";
 import {
   Navbar,
@@ -142,7 +144,7 @@ function NavListMenu() {
         <MenuHandler>
           <Typography as="a" href="#" variant="small" className="font-normal">
             <MenuItem className="hidden items-center gap-2 text-blue-gray-900 lg:flex lg:rounded-full">
-              <EllipsisVerticalIcon className="h-[28px] w-[28px]" /> All
+              <EllipsisVerticalIcon className="h-[18px] w-[18px]" /> All
               Category
               <ChevronDownIcon
                 strokeWidth={2}
@@ -201,32 +203,58 @@ export function Header() {
   }, []);
 
   return (
-    <Navbar className=" mx-auto max-h-screen p-2 lg:pl-6 ">
-      <div className="relative mx-auto flex items-center text-black">
-        <Typography
-          as="a"
-          href="#"
-          className="mr-4 ml-2 cursor-pointer py-1.5 font-medium"
-        >
-          <img className="h-10" src={logo} alt="" />
-        </Typography>
-        <div className="absolute top-2/4 left-2/4 hidden -translate-x-2/4 -translate-y-2/4 lg:block">
-          <NavList />
+    <div className="bg-white text-black py-4">
+      <div className="container mx-auto flex justify-between items-center">
+        <div>
+          {/* <h1 className="text-2xl font-bold">DealHub</h1> */}
+          <img className="w-32" src={logo} alt="" />
         </div>
-        <IconButton
-          size="sm"
-          color="blue-gray"
-          variant="text"
-          onClick={toggleIsNavOpen}
-          className="ml-auto mr-2 lg:hidden"
-        >
-          <Bars2Icon className="h-6 w-6" />
-        </IconButton>
-        <ProfileMenu />
+        <div className="flex items-center">
+          <div className="relative inline-block text-white border">
+            <select
+              className="bg-white text-black px-3 py-2 focus:outline-none"
+              value={category}
+              onChange={(e) => handleCategoryChange(e.target.value)}
+            >
+              {categoryOptions.map((option, index) => (
+                <option key={index} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="divide-y-2 border">
+            <input
+              type="text"
+              className="bg-white text-black px-3 py-2 focus:outline-none"
+              placeholder="I'm searching for..."
+            />
+          </div>
+          <button className="px-3 py-2 relative lg:right-10 md:right-10">
+            <AiOutlineSearch />
+          </button>
+          <div
+            className="ml-4 relative inline-block text-black"
+            ref={userMenuRef}
+          >
+            <div className="cursor-pointer text-4xl" onClick={toggleUserMenu}>
+              <BiSolidUser />
+            </div>
+            {isUserMenuOpen && (
+              <div className="absolute right-0 mt-2 py-2 w-32 bg-white text-black rounded-lg shadow-lg">
+                <div className="py-1 px-4 cursor-pointer hover:bg-gray-200">
+                  My Profile
+                </div>
+                <div className="py-1 px-4 cursor-pointer hover-bg-gray-200">
+                  Wishlist
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
       </div>
-      <MobileNav open={isNavOpen} className="overflow-scroll">
-        <NavList />
-      </MobileNav>
-    </Navbar>
+    </div>
   );
 }
+
+export default Header;
