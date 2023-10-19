@@ -1,7 +1,8 @@
-import  { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { BiSolidUser } from "react-icons/bi";
-import logo from "../../../assets/logo 2.png"; 
+import logo from "../../../assets/logo 2.png";
+import { Link } from "react-router-dom";
 
 function Header() {
   const [category, setCategory] = useState("All Category");
@@ -42,10 +43,12 @@ function Header() {
   }, []);
 
   return (
-    <div className="bg-white text-black py-4">
+    <div className="bg-white text-black py-4 mx-4">
       <div className="container mx-auto flex justify-between items-center">
         <div>
-          <img className="w-32" src={logo} alt="" />
+          <Link>
+            <img src={logo} className="w-32" alt="" />
+          </Link>
         </div>
         <div className="flex items-center">
           <div className="relative inline-block text-white border">
@@ -68,10 +71,7 @@ function Header() {
               className="bg-white text-black px-3 py-2 focus:outline-none md:mt-2"
               placeholder="I'm searching for..."
             />
-            <button
-              className="md:text-2xl md:mr-2"
-            >
-              
+            <button className="md:text-2xl md:mr-2">
               <AiOutlineSearch />
             </button>
           </div>
@@ -83,7 +83,6 @@ function Header() {
                 className="bg-white text-black px-3 py-3 focus:outline-none"
                 placeholder="I'm searching for..."
               />
-              
             </div>
           ) : (
             <button

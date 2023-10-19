@@ -6,8 +6,8 @@ import Popup from "../Components/PopUp/PopUp";
 const MainLayout = () => {
   return (
     <div>
-      <Popup></Popup>
       <Outlet></Outlet>
+      <Popup></Popup>
       <Footer />
       <GoToTop></GoToTop>
     </div>
