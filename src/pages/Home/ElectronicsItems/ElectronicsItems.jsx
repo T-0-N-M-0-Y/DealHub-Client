@@ -26,9 +26,23 @@ const ElectronicsItems = () => {
           ELECTRONICS ITEMS
         </h2>
         <Swiper
-          slidesPerView={3}
-          spaceBetween={30}
+          slidesPerView={1}
+          spaceBetween={10}
           navigation={true}
+          breakpoints={{
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 10,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 10,
+            },
+          }}
           modules={[Navigation]}
           className="mySwiper"
         >
