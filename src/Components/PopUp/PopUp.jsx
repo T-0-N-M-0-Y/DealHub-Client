@@ -1,5 +1,3 @@
-// Popup.js
-
 import { useState } from "react";
 import { ImCross } from "react-icons/im";
 
@@ -13,18 +11,22 @@ const Popup = () => {
   return (
     <div
       className={`fixed inset-0 flex items-center justify-center ${
-        isOpen ? "visible" : "invisible"
-      }`}
+        isOpen ? "block" : "hidden"
+      } z-50 bg-black bg-opacity-70 text-white`}
     >
-      <div className="bg-black bg-opacity-70 text-white w-1/3 p-6 rounded-lg shadow-lg">
+      <div className="w-2/3 md:w-1/2 lg:w-1/3 p-6 rounded-lg shadow-lg bg-orange-400 bg-opacity-50 text-white relative">
         <button
-          className="absolute md:top-[429px] md:right-[643px] text-red-500 hover:text-red-700 cursor-pointer"
+          className="absolute top-2 right-2 text-red-500 hover:text-red-700 cursor-pointer"
           onClick={handleClose}
         >
-          <ImCross></ImCross>
+          <ImCross />
         </button>
-        <h2 className="text-2xl font-semibold mb-4">Welcome to Our Website</h2>
-        <p>This is your custom pop-up content.</p>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-4">
+          Hello Team Tech Army
+        </h2>
+        <p className="text-base md:text-lg lg:text-xl">
+          I Love You Too . . . . . .
+        </p>
       </div>
     </div>
   );
