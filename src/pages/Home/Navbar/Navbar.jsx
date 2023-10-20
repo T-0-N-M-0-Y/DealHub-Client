@@ -1,15 +1,164 @@
+// import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Transition } from "@headlessui/react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const navMenu = (
+    <>
+      <Link
+        href="#"
+        className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md tracking-widest text-sm font-medium"
+      >
+        HOME
+      </Link>
+
+      <Link
+        href="#"
+        className="text-gray-300 hover:bg-gray-700 hover:text-white tracking-widest px-3 py-2 rounded-md text-sm font-medium"
+      >
+        CONTACT
+      </Link>
+
+      <Link
+        href="#"
+        className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium tracking-widest"
+      >
+        BLOG
+      </Link>
+
+      <Link
+        href="#"
+        className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium tracking-widest"
+      >
+        VENDORS
+      </Link>
+
+      <Link
+        href="#"
+        className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium tracking-widest"
+      >
+        COMPARE
+      </Link>
+    </>
+  );
   return (
-    <div className="bg-black  text-white py-3 mb-4 px-6 tracking-widest text-sm mt-2  font-semibold">
-      <div className="flex justify-evenly">
-        <Link>HOME</Link>
-        <Link>CONTACT</Link>
-        <Link>BLOG</Link>
-        <Link>VENDORS</Link>
-        <Link>COMPARE</Link>
-      </div>
+    <div>
+      <nav className="bg-black mb-1">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
+            <div className="flex items-center">
+              <div className="hidden md:block">
+                {/* <div className="ml-10 flex items-baseline space-x-4">
+                  <a
+                    href="#"
+                    className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
+                  >
+                    Home
+                  </a>
+
+                  <a
+                    href="#"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  >
+                    Team
+                  </a>
+
+                  <a
+                    href="#"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  >
+                    Projects
+                  </a>
+
+                  <a
+                    href="#"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  >
+                    Calendar
+                  </a>
+
+                  <a
+                    href="#"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  >
+                    Reports
+                  </a>
+                </div> */}
+                <div className="ml-10 flex items-baseline space-x-4">
+                  {navMenu}
+                </div>
+              </div>
+            </div>
+            <div className="-mr-2 flex md:hidden">
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                type="button"
+                className="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
+              >
+                <span className="sr-only">Open main menu</span>
+                {!isOpen ? (
+                  <svg
+                    className="block h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    />
+                  </svg>
+                ) : (
+                  <svg
+                    className="block h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                )}
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <Transition
+          show={isOpen}
+          enter="transition ease-out duration-100 transform"
+          enterFrom="opacity-0 scale-95"
+          enterTo="opacity-100 scale-100"
+          leave="transition ease-in duration-75 transform"
+          leaveFrom="opacity-100 scale-100"
+          leaveTo="opacity-0 scale-95"
+        >
+          {(ref) => (
+            <div className="md:hidden" id="mobile-menu">
+              <div
+                ref={ref}
+                className="px-2 pt-2 pb-3 flex  flex-col space-y-1 sm:px-3"
+              >
+                {navMenu}
+              </div>
+            </div>
+          )}
+        </Transition>
+      </nav>
     </div>
   );
 };

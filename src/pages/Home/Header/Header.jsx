@@ -43,11 +43,11 @@ function Header() {
   }, []);
 
   return (
-    <div className="bg-white text-black py-4 mx-4">
+    <div className="bg-white text-black py-4 mx-3">
       <div className="container mx-auto flex justify-between items-center">
         <div>
           <Link>
-            <img src={logo} className="w-32" alt="" />
+            <img src={logo} className="w-32 pr-1" alt="" />
           </Link>
         </div>
         <div className="flex items-center">

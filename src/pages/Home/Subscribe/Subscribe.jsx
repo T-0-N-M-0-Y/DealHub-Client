@@ -23,9 +23,7 @@ const Subscribe = () => {
           placeholder="Your email address.."
           className="border px-4 py-2 border-gray-400 w-full md:w-48 lg:w-60"
         />
-        <button
-          className="px-3 py-2 rounded bg-red-700 text-white font-semibold ml-2 lg:ml-4"
-        >
+        <button className="px-3 py-2 rounded bg-red-700 text-white font-semibold lg:ml-4">
           SUBSCRIBE
         </button>
       </div>
