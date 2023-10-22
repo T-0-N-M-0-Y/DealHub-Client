@@ -47,51 +47,15 @@ const Navbar = () => {
     <div>
       <nav className="bg-black mb-1">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
+          <div className="flex items-center justify-start h-16">
             <div className="flex items-center">
               <div className="hidden md:block">
-                {/* <div className="ml-10 flex items-baseline space-x-4">
-                  <a
-                    href="#"
-                    className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Home
-                  </a>
-
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Team
-                  </a>
-
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Projects
-                  </a>
-
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Calendar
-                  </a>
-
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Reports
-                  </a>
-                </div> */}
                 <div className="ml-10 flex items-baseline space-x-4">
                   {navMenu}
                 </div>
               </div>
             </div>
-            <div className="-mr-2 flex md:hidden">
+            <div className="md:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
@@ -99,23 +63,9 @@ const Navbar = () => {
                 aria-controls="mobile-menu"
                 aria-expanded="false"
               >
-                <span className="sr-only">Open main menu</span>
+                <span className="sr-only flex">Open main menu</span>
                 {!isOpen ? (
-                  <svg
-                    className="block h-6 w-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M4 6h16M4 12h16M4 18h16"
-                    />
-                  </svg>
+                  <span className="font-bold text-white border-y-2">MENU</span>
                 ) : (
                   <svg
                     className="block h-6 w-6"
