@@ -75,7 +75,7 @@ const GoGiFa = () => {
     }
 
     return (
-        <div className='flex items-center justify-between mx-10'>
+        <div className='flex items-center justify-between'>
             <h1 className="my-3 text-start">Or Login With</h1>
             <div className="flex justify-end">
                 <Link onClick={handleGoogleSignIn}><FaGoogle className="text-xl"></FaGoogle></Link>

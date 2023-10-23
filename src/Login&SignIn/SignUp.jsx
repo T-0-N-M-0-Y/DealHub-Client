@@ -50,50 +50,55 @@ const SignUp = () => {
     }
 
     return (
-        <div className="h-screen">
-            <div className='py-24 md:w-1/2 md:h-screen mx-auto border-2 shadow-2xl'>
+        <div>
+            <div className='py-24 md:w-1/2 md:h-screen mx-auto rounded-xl border-2 my-10 shadow-xl'>
                 <h1 className='text-2xl font-bold text-center uppercase'>Create an Account</h1>
                 <h1 className='text-sm mt-2 text-center'>Not have an account? Create your account. Its take less then a minutes</h1>
-                <form onSubmit={handleSubmit(onSubmit)} className="card-body">
+                <form onSubmit={handleSubmit(onSubmit)} className="my-10 mx-20">
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Name</span>
                         </label>
-                        <input type="text" {...register("name", { required: true })} placeholder="Name" className="input input-bordered" />
+                        <br />
+                        <input type="text" {...register("name", { required: true })} placeholder="Name" className="input input-bordered w-11/12 my-2 border-2 p-2 rounded-lg" />
                         {errors.name && <span className="text-red-500">Name is required</span>}
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Email</span>
                         </label>
-                        <input type="email" {...register("email", { required: true })} placeholder="email" className="input input-bordered" />
+                        <br />
+                        <input type="email" {...register("email", { required: true })} placeholder="email" className="input input-bordered w-11/12 my-2 border-2 p-2 rounded-lg" />
                         {errors.email && <span className="text-red-500">Email is required</span>}
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Photo URL</span>
                         </label>
-                        <input type="text" {...register("photo")} placeholder="Your Photo" className="input input-bordered" />
+                        <br />
+                        <input type="text" {...register("photo")} placeholder="Your Photo" className="input input-bordered w-11/12 my-2 border-2 p-2 rounded-lg" />
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Password</span>
                         </label>
-                        <input type="password" {...register("password", { required: true, minLength: 6, maxLength: 20, pattern: /^(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z!@#$%^&*\d]+$/ })} placeholder="password" className="input input-bordered" />
+                        <input type="password" {...register("password", { required: true, minLength: 6, maxLength: 20, pattern: /^(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z!@#$%^&*\d]+$/ })} placeholder="password" className="input input-bordered w-11/12 my-2 border-2 p-2 rounded-lg" />
                         {errors.password?.type === 'required' && <p className="text-red-500">password is required</p>}
                         {errors.password?.type === 'minLength' && <p className="text-red-500">password must be 6 characters</p>}
                         {errors.password?.type === 'pattern' && <p className="text-red-500">password must have a Capital letter & a Special Charecter</p>}
                     </div>
                     <div className="form-control mt-6">
                         <motion.div className="box"
-                            whileHover={{ scale: .9 }}
+                            whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 1.2 }}
                             transition={{ type: "spring", stiffness: 400, damping: 17 }} >
-                            <input className="btn bg-orange-800 text-white hover:bg-orange-500 border-none w-full" type="submit" value="Sign Up" />
+                            <input className="p-2 rounded-lg bg-red-600 text-white hover:bg-red-800 border-none w-11/12" type="submit" value="Sign Up" />
                         </motion.div>
                     </div>
+                    <div className="mr-12 mt-2">
+                        <GoGiFa></GoGiFa>
+                    </div>
                 </form>
-                <GoGiFa></GoGiFa>
             </div>
         </div>
     );

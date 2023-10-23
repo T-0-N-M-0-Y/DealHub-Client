@@ -3,6 +3,7 @@ import LatestProducts from "../../../Components/LatestProducts/LatestProducts";
 import NewArrivals from "../../../Components/NewArrivals/NewArrivals";
 import RecentProducts from "../../../Components/Recent/RecentProducts";
 import SomeInfo from "../../../Components/SomeInfo/SomeInfo";
+import Social from "../../../Provider/Social";
 import Banner from "../Banner/Banner";
 import BestProducts from "../BestProducts/BestProducts";
 import Brands from "../Brands/Brands";
@@ -17,6 +18,7 @@ const Home = () => {
     <>
       <div className="pb-6 ">
         <Header></Header>
+        <Social></Social>
       </div>
       <div className="my-container hidden lg:block">
         <div className="grid grid-cols-5 gap-2">

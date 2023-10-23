@@ -89,25 +89,26 @@ const Login = () => {
     };
 
     return (
-        <div className='md:h-full md:mt-14'>
+        <div className='md:h-full md:m-20'>
             <div className='py-24 md:px-10 md:w-1/2 mx-auto md:border-2 rounded-2xl md:shadow-2xl'>
-                <form onSubmit={handleSubmit(onSubmit)} className="card-body">
+                <form onSubmit={handleSubmit(onSubmit)} className="mx-10">
                     <h1 className='text-2xl font-bold text-center uppercase'>Login Now!</h1>
 
-                    <div className="form-control">
+                    <div>
                         <label className="label">
-                            <span className="label-text">Email</span>
+                            <span className="text-xl font-semibold">Email</span>
                         </label>
-                        <input type="email" {...register("email", { required: true })} placeholder="email" ref={emailRef} className="input input-bordered w-11/12" />
+                        <br />
+                        <input type="email" {...register("email", { required: true })} placeholder="Email" ref={emailRef} className="input input-bordered w-11/12 my-2 border-2 p-2 rounded-lg" />
                     </div>
 
-                    <div className="form-control">
+                    <div>
                         <label className="label">
-                            <span className="label-text">Password</span>
+                            <span className="text-xl font-semibold">Password</span>
                         </label>
                         <div className='flex items-center justify-between'>
-                            <input type={showPassowrd ? 'text' : 'password'} {...register("password", { required: true, minLength: 6, maxLength: 20 })} placeholder="password" className="input input-bordered w-11/12" />
-                            <Link><FaEye className='text-xl' onClick={() => setShowPassword(!showPassowrd)}></FaEye></Link>
+                            <input type={showPassowrd ? 'text' : 'password'} {...register("password", { required: true, minLength: 6, maxLength: 20 })} placeholder="password" className="input input-bordered w-11/12 my-2 border-2 p-2 rounded-lg" />
+                            <Link><FaEye className='text-xl -ml-20' onClick={() => setShowPassword(!showPassowrd)}></FaEye></Link>
                         </div>
                     </div>
 
@@ -115,18 +116,19 @@ const Login = () => {
 
                     <div className="form-control mt-6">
                         <motion.div className="box"
-                            whileHover={{ scale: .9 }}
+                            whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 1.2 }}
                             transition={{ type: "spring", stiffness: 400, damping: 17 }} >
-                            <input className="btn w-11/12 bg-orange-500 text-white hover:bg-orange-800 border-none" type="submit" value="Login" />
+                            <input className="btn w-11/12 bg-red-600 text-white hover:bg-red-800 border-none p-2 rounded-lg font-bold" type="submit" value="Login" />
                         </motion.div>
                     </div>
+                    <div>
+                        <Link to={'/signup'}><p className='text-orange-800 mt-5'>New here?? Create an Account</p></Link>
+                    </div>
+                    <GoGiFa></GoGiFa>
                 </form>
-                <div className='mx-10'>
-                    <Link to={'/signup'}><p className='text-orange-800'>New here?? Create an Account</p></Link>
-                </div>
-                <GoGiFa></GoGiFa>
             </div>
+
         </div>
     );
 };
