@@ -15,6 +15,7 @@ const Navbar = () => {
       </Link>
 
       <Link
+      to="/contact"
         href="#"
         className="text-gray-300 hover:bg-gray-700 hover:text-white tracking-widest px-3 py-2 rounded-md text-sm font-medium"
       >
