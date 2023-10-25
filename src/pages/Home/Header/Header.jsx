@@ -14,6 +14,13 @@ function Header() {
     "All Category",
     "Audio & Home Theater",
     "Camera & Photo",
+    "Games & Consoles",
+    "Computer & Laptop",
+    "Headphone & Speaker",
+    "Smartphone & Accessories",
+    "Battary & Accessories",
+    "Furnitures",
+    "Television",
   ];
 
   const handleCategoryChange = (value) => {
