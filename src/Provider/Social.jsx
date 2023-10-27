@@ -31,7 +31,7 @@ const Social = () => {
 
                 const userSaved = { name: loggedUser.displayName, email: loggedUser.email }
 
-                fetch('Link here/users', {
+                fetch('http://localhost:5000/users', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

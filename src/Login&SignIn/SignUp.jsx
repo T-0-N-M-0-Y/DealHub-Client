@@ -26,7 +26,7 @@ const SignUp = () => {
 
                         const userSaved = { name: data.name, email: data.email }
 
-                        fetch('/users', {
+                        fetch('http://localhost:5000/users', {
                             method: 'POST',
                             headers: {
                                 'content-type': 'application/json'

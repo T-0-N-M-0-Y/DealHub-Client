@@ -19,7 +19,7 @@ const GoGiFa = () => {
 
                 const userSaved = { name: loggedUser.displayName, email: loggedUser.email }
 
-                fetch('/users', {
+                fetch('http://localhost:5000/users', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'
@@ -61,7 +61,7 @@ const GoGiFa = () => {
 
                 const userSaved = { name: loggedUser.displayName, email: loggedUser.email }
 
-                fetch('/users', {
+                fetch('http://localhost:5000/users', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'
