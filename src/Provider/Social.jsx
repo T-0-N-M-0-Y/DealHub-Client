@@ -89,7 +89,7 @@ const Social = () => {
                             <>
                                 <div className="flex items-center justify-center tooltip tooltip-bottom" data-tip="Edit Profile">
                                     <Link><button>{user.displayName}</button></Link>
-                                    <img src={user.photoURL} alt="" className="w-10 h-10 rounded-full" />
+                                    <img src={user.photoURL} alt="" className="w-10 h-10 ml-4 rounded-full" />
                                 </div>
                             </>
                             :
