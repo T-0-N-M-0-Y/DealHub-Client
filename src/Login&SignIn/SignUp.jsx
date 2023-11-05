@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import GoGiFa from "./GoGiFa";
 import { AuthContext } from "../Provider/AuthProvider";
+const image_hosting_token = import.meta.env.VITE_IMAGE_TOKEN;
 
 const SignUp = () => {
 
@@ -11,20 +12,30 @@ const SignUp = () => {
 
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
+    const image_hosting_url = `https://api.imgbb.com/1/upload?key=${image_hosting_token}`
+
     const navigate = useNavigate();
 
     const onSubmit = data => {
         console.log(data);
 
         createUserForEmailPassLogin(data.email, data.password)
+
+        const formData = new FormData();
+        formData.append('image', data.image[0])
+
+        fetch(image_hosting_url, {
+            method: 'POST',
+            body: formData
+        })
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
 
                 updateUserProfile(data.name, data.photo)
-                    .then(() => {
-
-                        const userSaved = { name: data.name, email: data.email }
+                    .then((imgResponse) => {
+                        const imgURL = imgResponse.data.display_url;
+                        const userSaved = { name: data.name, email: data.email, image: imgURL }
 
                         fetch('http://localhost:5000/users', {
                             method: 'POST',
@@ -73,10 +84,10 @@ const SignUp = () => {
                     </div>
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Photo URL</span>
+                            <span className="label-text">Your Photo</span>
                         </label>
                         <br />
-                        <input type="text" {...register("photo")} placeholder="Your Photo" className="input input-bordered w-11/12 my-2 border-2 p-2 rounded-lg" />
+                        <input type="file" {...register("image", { required: true })} className=" file-input file-input-bordered w-96 my-4" />
                     </div>
                     <div className="form-control">
                         <label className="label">
